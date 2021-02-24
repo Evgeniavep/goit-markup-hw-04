@@ -106,6 +106,7 @@ img {
   margin-left: 50px;
   display: flex;
   align-items: center;
+  white-space: nowrap;
 }
 
 .envelope {
@@ -171,7 +172,17 @@ img {
 /* преимущества */
 
 .visually-hidden {
-  display: none;
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
 }
 
 .advantages-container {
@@ -356,6 +367,8 @@ img {
 /* Постоянные клиенты */
 
 .clients {
+  display: flex;
+  justify-content: space-between;
   padding-top: 94px;
   padding-bottom: 98px;
 }
@@ -365,12 +378,66 @@ img {
   margin-bottom: 50px;
 }
 
-.clients-item {
+.clients-list {
+  display: flex;
+}
+
+.clients-list li:not(:last-child) {
+  margin-right: 30px;
+}
+
+.clients-list a {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
   width: 170px;
   height: 90px;
-  border: 1px, solid, var(--icon-grey);
-  background-color: transparent;
+
+  border: 1px solid var(--icon-grey);
+  color: var(--icon-grey);
   border-radius: 4px;
+}
+
+.clients-list a:hover,
+.clients-list a:focus {
+  color: var(--blue-text);
+  border: 1px solid var(--blue-text);
+}
+
+.client-a {
+  width: 44.27px;
+  height: 49.23px;
+  fill: currentColor;
+}
+
+.client-b {
+  width: 40px;
+  height: 52px;
+  fill: currentColor;
+}
+
+.client-c {
+  width: 41px;
+  height: 42.6px;
+  fill: currentColor;
+}
+
+.client-d {
+  width: 79.66px;
+  height: 42.02px;
+  fill: currentColor;
+}
+
+.client-e {
+  width: 59px;
+  height: 47px;
+  fill: currentColor;
+}
+
+.client-f {
+  width: 88.48px;
+  height: 45.44px;
+  fill: currentColor;
 }
 
 /* футер */
@@ -411,6 +478,57 @@ img {
   line-height: 1.71;
   color: var(--grey-text);
   margin-top: 9px;
+}
+
+/* ПРИСОЕДИНЯЙТЕСЬ */
+
+.join-links {
+  margin-left: 70px;
+}
+
+.join-links h3 {
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 1.17;
+  color: var(--white-text);
+  text-transform: uppercase;
+  margin-bottom: 20px;
+}
+
+.join-list li {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.join-list li:not(:last-child) {
+  margin-right: 10px;
+}
+
+.join-list a {
+  width: 44px;
+  height: 44px;
+  background-color: var(--white-op10);
+  color: var(--white-text);
+  border-radius: 50%;
+}
+
+.join-list a:hover,
+.join-list a:focus {
+  background-color: var(--blue-text);
+}
+
+.join-list svg {
+  width: 20px;
+  height: 20px;
+  fill: currentColor;
+  padding-top: 10px;
+  margin-left: 11px;
+}
+
+.join-list svg:hover,
+.join-list svg:focus {
+  color: currentColor;
 }
 
 /* портфолио фильтры */
@@ -458,48 +576,54 @@ img {
 
 /* портфолио карточки */
 
-.cards {
-  display: flex;
-  flex-wrap: wrap;
-}
-
 .cards-items {
   margin-left: -30px;
   margin-top: -30px;
 }
 
+.cards {
+  display: inline-flex;
+  flex-wrap: wrap;
+  flex-basis: calc(100% / 3 - 30px);
+}
+
+.cards li {
+  margin-left: 30px;
+  margin-top: 30px;
+}
+
 .portfolio-card-thumb {
-  outline: 1px solid var(--grey-border-light);
+  border: 1px solid var(--grey-border-light);
   height: 404px;
   width: 370px;
   text-align: left;
-  flex-basis: calc(100% / 3 - 30px);
-  margin-left: 30px;
-  margin-top: 30px;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.1);
 }
 
-.portfolio-card-thumb:hover {
+.portfolio-card-thumb:hover,
+.portfolio-card-thumb:focus {
   box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
     1px 4px 6px rgba(0, 0, 0, 0.16);
 }
 
 .card-title {
+  display: flex;
+  flex-direction: column;
   padding-top: 20px;
   padding-right: 24px;
   padding-bottom: 20px;
   padding-left: 24px;
-  text-align: center;
+  text-align: left;
 }
 
-.cards .h3 {
+.card-title h3 {
   font-weight: 700;
   font-size: 18px;
   line-height: 2;
   color: var(--main-text);
 }
 
-.cards .p {
+.card-title p {
   font-weight: 400;
   font-size: 16px;
   line-height: 1.88;
