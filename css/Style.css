@@ -1,0 +1,508 @@
+/* основные стили для всего документа */
+
+body {
+  font-family: 'Roboto', sans-serif;
+}
+
+h2 {
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 1.17;
+}
+
+.container {
+  width: 1200px;
+  padding: 0 15px;
+  margin: 0 auto;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+/* логотип */
+
+.logo {
+  font-family: 'raleway', sans-serif;
+  font-weight: 700;
+  font-size: 26px;
+  line-height: 1.17;
+}
+
+.logo-web {
+  color: var(--blue-text);
+}
+
+.logo-studio {
+  color: var(--main-text);
+  margin-right: 93px;
+}
+
+/* навигация шапка */
+
+.header-nav,
+.site-nav,
+.contacts-nav {
+  display: flex;
+}
+
+.header-nav {
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+
+.site-nav .nav-link:hover,
+.site-nav .nav-link:focus {
+  color: var(--blue-text);
+}
+
+.nav-item {
+  padding: 32px 0px 32px 0px;
+  margin-left: 50px;
+}
+
+.nav-item:first-child {
+  margin-left: 0px;
+}
+
+.nav-link {
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 1.17;
+  color: var(--main-text);
+}
+
+.nav-link.current {
+  color: var(--blue-text);
+}
+
+.header-contacts:hover,
+.header-contacts:focus {
+  color: var(--blue-text);
+}
+
+.contacts-nav {
+  margin-left: 305px;
+}
+
+.header-contacts:first-child {
+  margin-left: 0px;
+}
+
+.header-contacts:last-child {
+  margin-left: 30px;
+}
+
+.header-contacts {
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 1.17;
+  color: var(--grey-text);
+  padding-top: 32px;
+  padding-bottom: 32px;
+  margin-left: 50px;
+  display: flex;
+  align-items: center;
+}
+
+.envelope {
+  width: 16px;
+  height: 12px;
+  fill: currentColor;
+  margin-right: 10px;
+}
+
+.smartphone {
+  width: 10px;
+  height: 16px;
+  fill: currentColor;
+  margin-right: 10px;
+}
+
+/* ГЕРОЙ */
+
+.hero {
+  text-align: center;
+  padding-top: 200px;
+  padding-bottom: 200px;
+  background-color: var(--dark-back);
+  background-image: linear-gradient(
+      to right,
+      rgba(47, 48, 58, 0.4),
+      rgba(47, 48, 58, 0.4)
+    ),
+    url('../Images/hero.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+.hero-title {
+  font-weight: 900;
+  font-size: 44px;
+  line-height: 1.36;
+  color: var(--white-text);
+  text-transform: uppercase;
+}
+
+.hero-text {
+  box-sizing: border-box;
+  align-items: center;
+}
+
+.hero-btn {
+  margin-top: 30px;
+}
+
+.hero-button {
+  background: var(--blue-text);
+  padding: 10px 32px;
+  font-family: 'roboto', sans-serif;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 1.88;
+  color: var(--white-text);
+  border-radius: 4px;
+}
+
+/* преимущества */
+
+.visually-hidden {
+  display: none;
+}
+
+.advantages-container {
+  padding-top: 94px;
+  padding-bottom: 94px;
+  flex-basis: calc(100% / 4);
+}
+
+.item-first,
+.item-second,
+.item-third {
+  margin-right: 30px;
+  width: auto;
+}
+
+.advantages-list {
+  display: inline-flex;
+}
+
+.advantages > h3 {
+  margin-top: 30px;
+}
+
+.advantages-list > li::before {
+  display: block;
+  content: '';
+  height: 120px;
+  background-color: var(--light-grey);
+  border-radius: 4px;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.item-first::before {
+  background-image: url('../Images/antenna.png');
+}
+
+.item-second::before {
+  background-image: url('../Images/clock.png');
+}
+
+.item-third::before {
+  background-image: url('../Images/diagram.png');
+}
+
+.item-last::before {
+  background-image: url('../Images/astronaut.png');
+}
+
+.advantages-list > .li {
+  width: 270px;
+  flex-basis: calc(100% / 4);
+}
+
+.advantages p {
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 1.71;
+  color: var(--grey-text);
+  text-align: left;
+}
+
+.advantages h3 {
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 1.17;
+  text-transform: uppercase;
+  margin-bottom: 10px;
+  margin-top: 30px;
+}
+
+/* Чем мы занимаемся */
+
+.services-container {
+  padding-bottom: 94px;
+}
+
+.services-title {
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+.services-images {
+  display: flex;
+  flex-basis: calc(100% / 3);
+  justify-content: space-between;
+}
+
+/* команда */
+
+.team-container {
+  background-color: var(--light-grey);
+  padding-top: 94px;
+  padding-bottom: 94px;
+}
+
+.team-list {
+  display: flex;
+  justify-content: space-between;
+}
+
+.card-thumb {
+  background-color: var(--white-text);
+  outline: 1px solid transparent;
+  border-radius: 4px;
+  height: 428px;
+  width: 270px;
+  text-align: center;
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
+    0px 2px 1px rgba(0, 0, 0, 0.2);
+}
+
+.card-thumb:hover,
+.card-thumb:focus {
+  box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
+    1px 4px 6px rgba(0, 0, 0, 0.16);
+}
+
+.card-text {
+  padding-top: 30px;
+  padding-bottom: 16px;
+}
+
+.card-links {
+  padding-bottom: 30px;
+}
+
+.team-title {
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+.team-list .h3 {
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.17;
+}
+
+.team-list .p {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.16;
+  color: var(--grey-text);
+  margin-top: 10px;
+}
+
+.social-list li {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.social-list li:not(:last-child) {
+  margin-right: 10px;
+}
+
+.social-list a {
+  width: 44px;
+  height: 44px;
+  color: var(--icon-grey);
+  border-radius: 50%;
+}
+
+.social-list a:hover,
+.social-list a:focus {
+  background-color: var(--blue-text);
+  color: var(--white-text);
+}
+
+.social-list svg {
+  width: 20px;
+  height: 20px;
+  fill: currentColor;
+  padding-top: 10px;
+}
+
+.social-list svg:hover,
+.social-list svg:focus {
+  color: currentColor;
+}
+
+/* Постоянные клиенты */
+
+.clients {
+  padding-top: 94px;
+  padding-bottom: 98px;
+}
+
+.clients-title {
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+.clients-item {
+  width: 170px;
+  height: 90px;
+  border: 1px, solid, var(--icon-grey);
+  background-color: transparent;
+  border-radius: 4px;
+}
+
+/* футер */
+
+.footer {
+  background-color: var(--dark-back);
+  padding-top: 60px;
+  padding-bottom: 60px;
+}
+
+.footer-nav {
+  display: flex;
+  align-items: baseline;
+}
+
+.logo-studio-footer {
+  color: var(--white-text);
+}
+
+.footer-address {
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 1.71;
+  margin-top: 20px;
+}
+
+.footer-location {
+  color: var(--white-text);
+}
+
+.footer-contacts {
+  color: var(--white-op60);
+}
+
+.footer-link {
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 1.71;
+  color: var(--grey-text);
+  margin-top: 9px;
+}
+
+/* портфолио фильтры */
+
+.filter-container {
+  padding-bottom: 94px;
+  padding-top: 94px;
+  border-top: 1px solid var(--grey-border-light);
+}
+
+.filter-list {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 50px;
+}
+
+.filter-item {
+  background: var(--grey-button);
+  font-family: 'roboto', sans-serif;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.6;
+  color: var(--main-text);
+  border-radius: 4px;
+  margin-right: 8px;
+  padding: 6px 32px;
+}
+
+.filter-button {
+  margin-right: 8px;
+  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+}
+
+.filter-button :last-child {
+  margin-right: 0px;
+}
+
+.filter-item:hover,
+.filter-item:focus {
+  background: var(--blue-text);
+  color: var(--white-text);
+  box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
+    1px 4px 6px rgba(0, 0, 0, 0.16);
+}
+
+/* портфолио карточки */
+
+.cards {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.cards-items {
+  margin-left: -30px;
+  margin-top: -30px;
+}
+
+.portfolio-card-thumb {
+  outline: 1px solid var(--grey-border-light);
+  height: 404px;
+  width: 370px;
+  text-align: left;
+  flex-basis: calc(100% / 3 - 30px);
+  margin-left: 30px;
+  margin-top: 30px;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.1);
+}
+
+.portfolio-card-thumb:hover {
+  box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
+    1px 4px 6px rgba(0, 0, 0, 0.16);
+}
+
+.card-title {
+  padding-top: 20px;
+  padding-right: 24px;
+  padding-bottom: 20px;
+  padding-left: 24px;
+  text-align: center;
+}
+
+.cards .h3 {
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 2;
+  color: var(--main-text);
+}
+
+.cards .p {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.88;
+  color: var(--grey-text);
+  margin-top: 4px;
+}
