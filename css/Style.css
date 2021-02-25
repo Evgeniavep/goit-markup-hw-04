@@ -536,7 +536,7 @@ img {
 .filter-container {
   padding-bottom: 94px;
   padding-top: 94px;
-  border-top: 1px solid var(--grey-border-light);
+  /* border-top: 1px solid var(--grey-border-light); */
 }
 
 .filter-list {
@@ -554,12 +554,12 @@ img {
   color: var(--main-text);
   border-radius: 4px;
   margin-right: 8px;
-  padding: 6px 32px;
+  padding: 6px 22px;
 }
 
 .filter-button {
   margin-right: 8px;
-  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+  /* filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25)); */
 }
 
 .filter-button :last-child {
